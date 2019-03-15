@@ -1,0 +1,19 @@
+module counterup(clkin, ledout);
+
+input clkin;
+output reg [3:0] ledout = 4'b0000;
+
+integer counter = 0;
+
+always@(posedge clkin)
+begin
+	counter <= counter + 1;
+	
+	if(counter > 50000000)
+	begin
+		counter <= 0;
+		ledout <= ledout + 1;
+	end
+end
+
+endmodule
