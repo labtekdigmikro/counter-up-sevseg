@@ -7,7 +7,7 @@ entity counterup is
 		clkin: in std_logic;
 		ledout: out unsigned(3 downto 0)
 	);
-end mod9vhdl;
+end counterup;
 
 architecture counterupdesign of counterup is
 	signal counter : integer range 0 to 50000000 := 0;
